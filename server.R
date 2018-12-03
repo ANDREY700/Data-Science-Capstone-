@@ -13,11 +13,9 @@ source("Predict.R")
 
 
 
+
 shinyServer(function(input, output) {
 
-  gram1 <- readRDS('gram1.rds',.GlobalEnv)
-  gram2 <- readRDS('gram2na.rds',.GlobalEnv)
-  gram3 <- readRDS('gram3na.rds',.GlobalEnv)
 
   output$gram3w <- renderText({
     hope <- as.character(Gram3procedure(as.character(input$text)))
