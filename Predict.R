@@ -1,9 +1,12 @@
 
+setwd("~/ABRAMOV Andrey/Capstone_project/2018/5. New shiny app/Keyboard_typing_prediction_algorithm")
+gram1 <- readRDS('gram1.rds',.GlobalEnv)
+gram2 <- readRDS('gram2na.rds',.GlobalEnv)
+gram3 <- readRDS('gram3na.rds',.GlobalEnv)
+
+
 Gram3procedure <- function(x) {
   require(tm)
-  gram1 <- readRDS('gram1.rds',.GlobalEnv)
-  gram2 <- readRDS('gram2na.rds',.GlobalEnv)
-  gram3 <- readRDS('gram3na.rds',.GlobalEnv)  
   # x <- "I like"
 
   # clean it before proceed
@@ -44,9 +47,6 @@ Gram3procedure <- function(x) {
 
 Gram2procedure <- function(x) {
   require(tm)
-  gram1 <- readRDS('gram1.rds',.GlobalEnv)
-  gram2 <- readRDS('gram2na.rds',.GlobalEnv)
-  gram3 <- readRDS('gram3na.rds',.GlobalEnv)
   # x <- "I like"
 
   # clean it before proceed
@@ -85,9 +85,6 @@ Gram2procedure <- function(x) {
 
 Gram1procedure <- function(x) {
   require(tm)
-  gram1 <- readRDS('gram1.rds',.GlobalEnv)
-  gram2 <- readRDS('gram2na.rds',.GlobalEnv)
-  gram3 <- readRDS('gram3na.rds',.GlobalEnv)
   # x <- "I bread"
   # clean it before proceed
   x <- tolower(x)
@@ -124,9 +121,7 @@ Gram1procedure <- function(x) {
 
 Gram_C_procedure <- function(x) {
   require(tm)
-  gram1 <- readRDS('gram1.rds',.GlobalEnv)
-  gram2 <- readRDS('gram2na.rds',.GlobalEnv)
-  gram3 <- readRDS('gram3na.rds',.GlobalEnv)
+
   # x <- "I need"
   # clean it before proceed
   x <- tolower(x)
